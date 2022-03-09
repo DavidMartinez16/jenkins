@@ -17,7 +17,7 @@ pipeline{
         stage('Branch Verification') {
                 when {
                         not {
-                                branch "master"
+                                branch "main"
                         }
                 }
                 steps {
@@ -35,7 +35,7 @@ pipeline{
                         agent {
                                 docker {
                                         reuseNode false
-					image 'ubuntu'
+					image 'nginx'
                                         }
 			}
 				steps {
