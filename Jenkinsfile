@@ -17,7 +17,7 @@ pipeline{
         stage('Branch Verification') {
                 when {
                         not {
-                                branch "main"
+                                branch "master"
                         }
                 }
                 steps {
