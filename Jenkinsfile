@@ -24,7 +24,7 @@ pipeline{
 			echo "Hello from the main"
                         }
         }
-        stage('Paralallel Step') {
+        stage('Parallel Step') {
                 parallel {
                         stage('Unit Test') {
                                 steps{
