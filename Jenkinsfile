@@ -3,29 +3,28 @@ pipeline{
         label "Docker"
     }
     stages {
-        stage('One') {
+        stage('Hello Message') {
                 steps {
-                        echo 'Hi, this is Zulaikha from edureka'
+                        echo 'Hi, this is David Martínez'
 			
                 }
         }
-	    stage('Two'){
-		    
+	stage('Verification Step'){
 		steps {
 			input('Do you want to proceed?')
         }
 	    }
-        stage('Three') {
+        stage('Branch Verification') {
                 when {
                         not {
                                 branch "master"
                         }
                 }
                 steps {
-			echo "Hello"
+			echo "Hello from the main"
                         }
         }
-        stage('Four') {
+        stage('Paralallel Step') {
                 parallel {
                         stage('Unit Test') {
                                 steps{
