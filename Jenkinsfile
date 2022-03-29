@@ -24,6 +24,11 @@ pipeline{
 			echo "Hello from the main"
                         }
         }
+	stage('Email Notification') {
+		steps {
+			emailext attachLog: true, body: '$DEFAULT_CONTENT', subject: 'This is test email - $DEFAULT_SUBJECT', to: 'pruebaingresoicare@gmail.com'
+		}
+        }
         stage('Parallel Step') {
                 parallel {
                         stage('Unit Test') {
