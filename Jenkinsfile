@@ -1,7 +1,5 @@
 pipeline{
-    agent{
-        label "Docker"
-    }
+    agent any
     stages {
         stage('Hello Message') {
                 steps {
